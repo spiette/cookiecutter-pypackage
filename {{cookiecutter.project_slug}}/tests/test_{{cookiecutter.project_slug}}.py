@@ -17,6 +17,8 @@ import unittest
 {%- if cookiecutter.command_line_interface|lower == 'click' %}
 from contextlib import contextmanager
 from click.testing import CliRunner
+{%- elif cookiecutter.command_line_interface|lower == 'argparse' %}
+import argparse
 {%- endif %}
 
 from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
